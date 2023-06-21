@@ -25,31 +25,36 @@ function App() {
           factor={2}
           style={{
             backgroundImage: `url(${moon})`,
-            backgroundSize: 'cover',
+            backgroundSize: "cover",
           }}
         />
 
         <ParallaxLayer
-          offset={2}
+          offset={1}
           speed={1}
-          factor={4}
+          factor={5}
           style={{
             backgroundImage: `url(${land})`,
-            backgroundSize: 'cover',
+            backgroundSize: "cover",
           }}
         ></ParallaxLayer>
 
         <ParallaxLayer
           sticky={{ start: 0.9, end: 2.5 }}
-          style={{ textAlign: 'center' }}
+          style={{ textAlign: "center" }}
         >
-          <img src={cat} alt='cat' />
+          <img src={cat} alt="cat" />
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={0.2}
           speed={0.05}
           onClick={() => ref.current.scrollTo(3)}
+          style={{
+            textAlign: "center",
+            color:'azure',
+            fontSize: '3vw',
+          }}
         >
           <h2>Welcome to my website</h2>
         </ParallaxLayer>
@@ -58,6 +63,9 @@ function App() {
           offset={3}
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
+          style={{
+            color: "white",
+          }}
         >
           <h2>Hi Mom!</h2>
         </ParallaxLayer>
